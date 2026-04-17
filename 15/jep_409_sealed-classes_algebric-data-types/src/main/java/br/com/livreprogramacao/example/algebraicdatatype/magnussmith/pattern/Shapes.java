@@ -1,14 +1,9 @@
-package br.com.livreprogramacao.example.algebraicdatatype.magnussmith;
+package br.com.livreprogramacao.example.algebraicdatatype.magnussmith.pattern;
 
 import java.util.List;
 
-sealed interface Shape permits Circle, Rectangle, Triangle, Pentagon {}
-
-record Circle(double radius) implements Shape {}
-record Rectangle(double width, double height) implements Shape {}
-record Triangle(double side1, double side2, double side3) implements Shape {}
-record Pentagon(double side) implements Shape {}
-
+// Algebraic Data Types and Pattern Matching with Java
+// com.scottlogic.blog.
 
 class Shapes {
 
@@ -64,6 +59,5 @@ class Shapes {
         System.out.println("\nShapes : " + shapes + " scaled by 2");
         shapes.stream().map(s -> Shapes.scale(s, 2)).map(Shapes::info).forEach(System.out::println);
     }
+
 }
-
-
