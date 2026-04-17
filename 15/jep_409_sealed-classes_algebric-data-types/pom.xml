@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+    Section: properties details
+    -->
+    <groupId>com.github.livreprogramacao.example</groupId>
+    <artifactId>sealed-classes</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>JEP 409: Sealed Classes</name>
+    <description>
+        Enhance the Java programming language with sealed classes and interfaces.
+        Sealed classes and interfaces restrict which other classes or interfaces may extend or implement them.
+        A sealed class or interface can be extended or implemented only by those classes and interfaces permitted to do so.
+    </description>
+    <url>https://github.com/livreprogramacao/software-engineer-roadmap</url>
+
+    <dependencies>
+        <dependency>
+            <!-- Jakarta Validator -->
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <dependency>
+            <!-- SLF4J API -->
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.api.version}</version> <!-- Use the latest version -->
+        </dependency>
+        <dependency>
+            <!-- SLF4J Implementation -->
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.api.version}</version> <!-- Log4j binding -->
+        </dependency>
+        <dependency>
+            <!-- Lombok set up -->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version> <!-- Check for the latest version -->
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <!-- Testing -->
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <!--
+        Section: properties details
+        -->
+        <h2.version>2.4.240</h2.version>
+        <java.version>25</java.version>
+        <javax.persistence.api.version>2.2</javax.persistence.api.version>
+        <junit.jupiter.version>5.10.0</junit.jupiter.version>
+        <log4j.version>2.14.1</log4j.version>
+        <lombok.version>1.18.42</lombok.version>
+        <main.class>com.github.livreprogramacao.example.App</main.class> <!-- Define your main class here -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <slf4j.api.version>1.7.36</slf4j.api.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+    </properties>
+
+    <build>
+        <!--
+        Section: build
+        The <build> section is essential for defining how your project should be compiled, packaged, and tested.
+        This section enables you to configure various plugins crucial for building your application effectively.
+        Proper configuration of this section can optimize your build process and streamline development workflows.
+        -->
+        <plugins>
+            <plugin>
+                <!-- Apache Maven that is used to compile the source code of a project. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+

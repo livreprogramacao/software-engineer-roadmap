@@ -1,0 +1,2 @@
+module sealed.classes {
+}
