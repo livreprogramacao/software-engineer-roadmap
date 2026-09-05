@@ -4,15 +4,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class BillCalculatorTest {
+public class BillTest {
 
     @Test
     public void totalStartAtZero() {
         // Arrange
-        var calculator = new BillCalculator();
+        var bill = new Bill();
 
         // Act
-        float total = calculator.getTotal();
+        float total = bill.getTotal();
 
         // Assert
         assertThat(total).isZero();
@@ -21,14 +21,29 @@ public class BillCalculatorTest {
     @Test
     public void correctTotalForOneItem() {
         // Arrange
-        var calculator = new BillCalculator();
+        var bill = new Bill();
 
         // Act
-        calculator.add( 12.95F);
-        float total = calculator.getTotal();
+        bill.add( 12.95F);
+        float total = bill.getTotal();
 
         // Assert
         assertThat(total).isEqualTo(12.95F);
+    }
+
+    @Test
+    public void correctTotalForTwoItems() {
+
+        // Arrange
+        var bill = new Bill();
+
+        // Act
+        bill.add( 12.95F);
+        bill.add( 2.05F);
+        float total = bill.getTotal();
+
+        // Assert
+        assertThat(total).isEqualTo(12.95F + 2.05F);
     }
 }
 

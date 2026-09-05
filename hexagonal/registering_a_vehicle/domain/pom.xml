@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--
+    Section: properties details
+    -->
+    <groupId>com.github.livreprogramacao.registeringavehicle.domain</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <artifactId>domain</artifactId>
+    <packaging>jar</packaging>
+    <name>Registering a vehicle. The domain</name>
+    <description>
+        Visão geral
+        Restaurante modular composto por unidades funcionais independentes (módulos) que se conectam fisicamente e operacionalmente para formar o empreendimento. Cada módulo tem responsabilidades claras, fluxos de trabalho definidos e interfaces padronizadas com os demais (espacial, elétrico, hidráulico e de informação).
+    </description>
+    <url>https://github.com/livreprogramacao/software-engineer-roadmap</url>
+    <licenses>
+        <!--
+        Section: licenses details
+        -->
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A permissive license allowing the software to be used freely.</comments>
+        </license>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+            <comments>A simple and easy-to-understand license.</comments>
+        </license>
+    </licenses>
+    <developers>
+        <!--
+        Section: developers details
+        -->
+        <developer>
+            <id>livreprogramacao</id>
+            <name>Fabio Santos Almeida</name>
+            <email>livre.programacao@gmail.com</email>
+            <url>https://github.com/livreprogramacao</url>
+            <organization>Github Corp</organization>
+            <organizationUrl>https://github.com/livreprogramacao</organizationUrl>
+            <roles>
+                <role>lead</role>
+                <role>developer</role>
+            </roles>
+            <timezone>UTC-3</timezone>
+        </developer>
+        <developer>
+            <id>basil.nigger</id>
+            <name>Basil Nigger</name>
+            <email>basil.nigger@gmail.com</email>
+            <url>http://basil.nigger.com</url>
+            <organization>Nigger Solutions</organization>
+            <organizationUrl>https://github.com/livreprogramacao</organizationUrl>
+            <roles>
+                <role>developer</role>
+                <role>tester</role>
+            </roles>
+            <timezone>UTC-3</timezone>
+        </developer>
+    </developers>
+    <scm>
+        <!--
+        Section: scm details
+        -->
+        <connection>scm:git:git://github.com/livreprogramacao/software-engineer-roadmap.git</connection>
+        <developerConnection>scm:git:ssh://github.com/livreprogramacao/software-engineer-roadmap.git</developerConnection>
+        <tag>v0.0.1</tag>
+        <url>https://github.com/livreprogramacao/software-engineer-roadmap</url>
+    </scm>
+    <properties>
+        <!--
+        Section: properties details
+        -->
+        <java.version>25</java.version>
+        <main.class>com.github.livreprogramacao.registeringavehicle.App</main.class> <!-- Define your main class here -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.report.sourceEncoding>UTF-8</project.report.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!--
+        Section: dependencies details
+        -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>26.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--        <dependency>-->
+<!--            <groupId>org.mockito</groupId>-->
+<!--            <artifactId>mockito-core</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.mockito</groupId>-->
+<!--            <artifactId>mockito-junit-jupiter</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+    </dependencies>
+    <build>
+        <!--
+        Section: build
+        The <build> section is essential for defining how your project should be compiled, packaged, and tested.
+        This section enables you to configure various plugins crucial for building your application effectively.
+        Proper configuration of this section can optimize your build process and streamline development workflows.
+        -->
+        <plugins>
+            <plugin>
+                <!-- Apache Maven that is used to compile the source code of a project. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <annotationProcessorPaths>
+<!--                        <path>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                            <version>${lombok.version}</version>-->
+<!--                        </path>-->
+<!--                        <path>-->
+<!--                            <groupId>org.mapstruct</groupId>-->
+<!--                            <artifactId>mapstruct-processor</artifactId>-->
+<!--                            <version>${mapstruct.version}</version>-->
+<!--                        </path>-->
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <!--
+        Section: profiles
+        Using profiles to define properties
+        -->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <property name="database.url" value="jdbc:mysql://localhost:3306/devdb"/>
+                <property name="database.username" value="devuser"/>
+                <property name="database.password" value="devpassword"/>
+            </properties>
+        </profile>
+        <profile>
+            <id>prd</id>
+            <properties>
+                <property name="database.url" value="jdbc:mysql://prodhost:3306/prddb"/>
+                <property name="database.username" value="prduser"/>
+                <property name="database.password" value="prdpassword"/>
+            </properties>
+        </profile>
+    </profiles>
+</project>
