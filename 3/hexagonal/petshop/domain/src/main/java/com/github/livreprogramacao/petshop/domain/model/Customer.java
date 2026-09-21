@@ -1,0 +1,30 @@
+package com.github.livreprogramacao.petshop.domain.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Customer {
+
+    private Long id;
+
+    private Address address;
+
+    private String name;
+
+    private String phone;
+
+    private String cpf;
+
+    private LocalDate bornDate;
+
+    private LocalDate createdAt;
+
+}
