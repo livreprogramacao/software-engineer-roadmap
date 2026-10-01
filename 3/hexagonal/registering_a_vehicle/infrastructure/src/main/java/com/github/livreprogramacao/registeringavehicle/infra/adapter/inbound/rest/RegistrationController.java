@@ -31,15 +31,14 @@ public class RegistrationController {
     // Inbound: wire request -> value object. Never a domain entity here;
     // constructing RegistrationCase is the application/domain's job.
     @PostMapping
-    public ResponseEntity<String> register( @RequestBody RegistrationRequest request ) {
+    public ResponseEntity<RegistrationResponse> register( @RequestBody RegistrationRequest request ) {
 
-        System.out.println( "Go!" );
-// Salvar o registro, chamar um service etc.
-    return ResponseEntity
-            .status(HttpStatus.CREATED)
-            .body("Registro criado");
-//        CaseReference reference = registerVehicle.register(VehicleIdentificationNumber.of(request.vin()));
-//        return ResponseEntity.ok(new RegistrationResponse(reference.value(), registrationCase.status().name()));
+        System.out.println( "POST Go!" );
+
+        // Salvar o registro, chamar um service etc.
+//        return ResponseEntity.status(HttpStatus.CREATED).body("Registro criado");
+        CaseReference reference = registerVehicle.register(VehicleIdentificationNumber.of(request.vin().toString()));
+        return ResponseEntity.ok(new RegistrationResponse(reference.value(), registrationCase.status().name()));
 
     }
 
