@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: streaming
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: my-group
+      auto-offset-reset: earliest
