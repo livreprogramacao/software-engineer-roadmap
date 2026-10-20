@@ -58,7 +58,10 @@ It is **not usually the same as the VIN** or the vehicle registration/plate numb
 
 --- 
 
-Test 
+Test using cURL 
 
-
-curl --user user:pass http://localhost:8080/app/registrations/REG12345678
+```bash
+    curl --user user:pass http://localhost:8080/app/registrations/REG12345678
+    curl --user user:pass -X POST -H "Content-Type: application/json" -d '{ "reference":"REG12345678", "vin":"1HGCM82633A123456", "status":"PENDING" }' http://localhost:8080/app/registrations
+    curl --user user:pass -X POST -H "Content-Type: application/json" -d '{"reference":"REG123456789"}' http://localhost:8080/app/registrations
+```
