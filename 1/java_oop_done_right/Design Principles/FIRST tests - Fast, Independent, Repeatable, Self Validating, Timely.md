@@ -1,11 +1,7 @@
-﻿explain this design principle:
-• FIRST tests - Fast, Independent, Repeatable, Self Validating, Timely
-use spring framework
+﻿README
+====================
 
-GPT-6 Luna:
-<!-- **Explaining acronyms and unit testing**
-
-I’m going to explain the acronym FIRST, which stands for Fast, Independent, Repeatable, Self-validating, and Timely, particularly in the context of unit testing. I’ll provide examples using JUnit for service testing, avoiding the Spring context for these unit tests. For integration tests, I'll reference SpringBootTest. Timely testing is crucial here. I might also mention using isolated test containers for the database to ensure consistent testing. Let's get into the code! -->
+I’m going to explain the acronym FIRST, which stands for Fast, Independent, Repeatable, Self-validating, and Timely, particularly in the context of unit testing. I’ll provide examples using JUnit for service testing, avoiding the Spring context for these unit tests. For integration tests, I'll reference SpringBootTest. Timely testing is crucial here. I might also mention using isolated test containers for the database to ensure consistent testing. Let's get into the code!
 **FIRST** is a set of qualities that make tests trustworthy and easy to run:
 
 - **Fast:** Tests finish quickly, so developers run them often.

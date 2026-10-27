@@ -1,8 +1,6 @@
-﻿explain this design principle:
-• Hexagonal Architecture - Decouple external systems from the domain code
-use spring framework
+﻿README
+====================
 
-GPT-6 Luna:
 **Hexagonal Architecture** (also called **Ports and Adapters**) keeps business rules independent of frameworks, databases, APIs, and other external systems.
 
 Think of the application’s **domain and use cases as the center**. They define what they need through **ports**—interfaces. **Adapters** implement those interfaces to connect the application to external tools such as Spring MVC, a database, S3, or an SFTP server.

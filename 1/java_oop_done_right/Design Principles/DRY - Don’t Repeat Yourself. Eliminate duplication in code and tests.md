@@ -1,16 +1,8 @@
-﻿Esta conversa foi gerada com o Duck.ai (https://duck.ai) usando o modelo GPT-6 Luna da OpenAI. Os chats com IA podem apresentar informações incorretas ou ofensivas (consulta https://duckduckgo.com/duckai/privacy-terms para obter mais informações).
-
+﻿README
 ====================
 
-Pedido do utilizador 1 de 1 - 20/10/2026, 20:12:49:
-explain this design principle:
-• DRY - Don’t Repeat Yourself. Eliminate duplication in code and tests
-use spring framework
+Alright, I need to provide an educational answer that includes real-world examples of the Spring framework. To do that, I should look up some facts about Spring and gather relevant information. It sounds like a search will be necessary to find good examples that can illustrate its use in real-world products. Let's get going on this search!
 
-GPT-6 Luna:
-<!-- **Searching for Spring examples**
-
-Alright, I need to provide an educational answer that includes real-world examples of the Spring framework. To do that, I should look up some facts about Spring and gather relevant information. It sounds like a search will be necessary to find good examples that can illustrate its use in real-world products. Let's get going on this search! -->
 **DRY** means “Don’t Repeat Yourself”: keep each piece of knowledge or rule in one place, rather than copying it throughout your codebase. If a rule changes, you update it once instead of hunting down several copies that might drift apart.
 
 In Spring, a common example is putting shared business logic in a service and injecting that service wherever it’s needed:
@@ -44,4 +36,6 @@ Other classes can use the same `TaxCalculator` bean through constructor injectio
 DRY also applies to tests: if several tests repeat the same setup, extract a helper or fixture. But don’t remove repetition at all costs—two pieces of code that only look alike but represent different rules may be clearer kept separate. The goal is one authoritative place for each rule, not clever abstractions that make the code harder to understand.
 
 Ler mais
-[1] spring-beans-explained/README.md at main — https://github.com/kamilmazurek/spring-beans-explained/blob/main/README.md
+---
+
+[spring-beans-explained/README.md at main](https://github.com/kamilmazurek/spring-beans-explained/blob/main/README.md)

@@ -1,8 +1,6 @@
-﻿explain this principle:
-Tell Don’t Ask - Do work inside the object. Do not drag out data.
-use java
+﻿README
+====================
 
-GPT-6 Luna:
 **“Tell, Don’t Ask”** means: instead of asking an object for its data, making a decision elsewhere, and then telling it what to do, **tell the object what you want done and let it use its own data to do the work**.
 
 ### Asking for data

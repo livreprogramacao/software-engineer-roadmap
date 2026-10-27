@@ -1,17 +1,8 @@
-﻿Esta conversa foi gerada com o Duck.ai (https://duck.ai) usando o modelo GPT-6 Luna da OpenAI. Os chats com IA podem apresentar informações incorretas ou ofensivas (consulta https://duckduckgo.com/duckai/privacy-terms para obter mais informações).
-
+﻿README
 ====================
 
-Pedido do utilizador 1 de 1 - 20/10/2026, 20:06:20:
-explain this design principle:
-• SOLID - Single responsibility. Invert/Inject dependencies. Swappable.
-use spring framework
+I need to explain the context of SOLID principles, especially highlighting that it's often conflated. The Single Responsibility and Dependency Inversion principles, along with Dependency Injection, are key. I should include some concise Spring examples to illustrate how these concepts work. It's essential to clarify that Dependency Inversion is not the same as Dependency Injection to avoid confusion. I'll keep this focused and accessible for better understanding!
 
-
-GPT-6 Luna:
-<!-- **Clarifying SOLID principles**
-
-I need to explain the context of SOLID principles, especially highlighting that it's often conflated. The Single Responsibility and Dependency Inversion principles, along with Dependency Injection, are key. I should include some concise Spring examples to illustrate how these concepts work. It's essential to clarify that Dependency Inversion is not the same as Dependency Injection to avoid confusion. I'll keep this focused and accessible for better understanding! -->
 This phrase combines three related ideas:
 
 - **Single responsibility:** A class should have one clear reason to change. For example, an order service handles order workflow; a separate repository handles saving orders.

@@ -1,9 +1,6 @@
-﻿explain this design principle:
-• Collaboration - which object should be doing this job?
-use spring framework
+﻿README
+====================
 
-
-GPT-6 Luna:
 **Collaboration** is the design question: **“Which object should do this job, and which other objects should it ask for help?”**
 
 In an object-oriented Spring application, assign each responsibility to the object that has the right information and authority to handle it. Keep objects focused, and let them collaborate through clear methods or interfaces instead of making one class do everything.
